@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <!-- Nhãn trái, nhãn phải -->
+    <!-- Nhãn trái (Bạn) -->
+    <TextView
+        android:id="@+id/textViewYourLabel"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="55dp"
+        android:gravity="center"
+        android:text="Bạn"
+        android:textColor="#3e64ff"
+        android:textAllCaps="true"
+        android:textSize="25dp"
+        android:textStyle="bold"/>
+
+    <!-- Nhãn phải (Tôi) -->
+    <TextView
+        android:id="@+id/textViewMyLabel"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="55dp"
+        android:gravity="center"
+        android:text="Tôi"
+        android:textColor="#3e64ff"
+        android:textAllCaps="true"
+        android:textSize="25dp"
+        android:textStyle="bold"/>
+
+    <!-- 3 lá bài bên trái -->
+    <!-- Lá bài 1 bên trái -->
+    <ImageButton
+        android:id="@+id/imageButtonYourCard1"
+        android:layout_width="120dp"
+        android:layout_height="160dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewYourLabel"
+        android:layout_marginTop="25dp"
+        android:layout_marginLeft="15dp"
+        android:contentDescription="trai"
+        android:scaleType="fitCenter"
+        android:src="@drawable/labia"
+        android:rotation="-15"
+        android:background="#00000000"/>
+    <!-- Lá bài 2 bên trái -->
+    <ImageButton
+        android:id="@+id/imageButtonYourCard2"
+        android:layout_width="120dp"
+        android:layout_height="160dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewYourLabel"
+        android:layout_marginTop="37dp"
+        android:layout_marginLeft="35dp"
+        android:contentDescription="center"
+        android:scaleType="fitCenter"
+        android:src="@drawable/labia"
+        android:rotation="0"
+        android:background="#00000000"/>
+    <!-- Lá bài 3 bên trái -->
+    <ImageButton
+        android:id="@+id/imageButtonYourCard3"
+        android:layout_width="120dp"
+        android:layout_height="160dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewYourLabel"
+        android:layout_marginTop="49dp"
+        android:layout_marginLeft="55dp"
+        android:contentDescription="phai"
+        android:scaleType="fitCenter"
+        android:src="@drawable/labia"
+        android:rotation="15"
+        android:background="#00000000"/>
+    <!-- 3 lá bài bên phải -->
+    <!-- Lá bài 1 bên phải -->
+    <ImageButton
+        android:id="@+id/imageButtonMyCard1"
+        android:layout_width="120dp"
+        android:layout_height="160dp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewMyLabel"
+        android:layout_marginTop="25dp"
+        android:layout_marginRight="55dp"
+        android:contentDescription="trai"
+        android:scaleType="fitCenter"
+        android:src="@drawable/labia"
+        android:rotation="-15"
+        android:background="#00000000"/>
+    <!-- Lá bài 2 bên phải -->
+    <ImageButton
+        android:id="@+id/imageButtonMyCard2"
+        android:layout_width="120dp"
+        android:layout_height="160dp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewMyLabel"
+        android:layout_marginTop="37dp"
+        android:layout_marginRight="35dp"
+        android:contentDescription="center"
+        android:scaleType="fitCenter"
+        android:src="@drawable/labia"
+        android:rotation="0"
+        android:background="#00000000"/>
+    <!-- Lá bài 3 bên phải -->
+    <ImageButton
+        android:id="@+id/imageButtonMyCard3"
+        android:layout_width="120dp"
+        android:layout_height="160dp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewMyLabel"
+        android:layout_marginTop="49dp"
+        android:layout_marginRight="15dp"
+        android:contentDescription="phai"
+        android:scaleType="fitCenter"
+        android:src="@drawable/labia"
+        android:rotation="15"
+        android:background="#00000000"/>
+    <!-- Kết quả -->
+    <TextView
+        android:id="@+id/textViewResult"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/imageButtonYourCard2"
+        android:layout_marginTop="25dp"
+        android:gravity="center"
+        android:textColor="#3e64ff"
+        android:textAllCaps="true"
+        android:textSize="25dp"
+        android:textStyle="bold"
+        android:text="Lật bài đi nào!"/>
+    <!-- Nút nhấn -->
+    <Button
+        android:id="@+id/buttonPlay"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewResult"
+        android:text="Chơi ván mới"
+        android:background="#3e64ff"
+        android:textColor="#fff"
+        android:textStyle="bold"
+        android:textSize="25dp"/>
+    <!-- Hình kết quả -->
+    <ImageButton
+        android:id="@+id/imageButtonResult"
+        android:layout_width="200dp"
+        android:layout_height="350dp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonPlay"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:scaleType="fitCenter"
+        android:contentDescription="nut"
+        android:src="@drawable/labia"
+        android:background="#00000000"/>
+</androidx.constraintlayout.widget.ConstraintLayout>
